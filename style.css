@@ -6,6 +6,8 @@
 	--accent-color: #BF6A7A;
 	--dark-main-color: #2B5566;
 	--text-bright-color: #fff;
+	--icon-color: #fff;
+	--icon-bk-color: #ddd;
 }
 
 /* 基本設定: ページ全体*/
@@ -51,6 +53,27 @@ body {
 	width: 20%;
 }
 
+.conA a {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 30px;
+	border: solid 3px currentColor;
+	border-radius: 6px;
+	background-color: #BF6A7A;
+	background-color: var(--accent-color);
+	color: #fff;
+	color: var(--text-bright-color);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.conA a:hover {
+	background-image: linear-gradient(
+		rgba(255,255,255,0.2),
+		rgba(255,255,255,0.2)
+		);
+}
+
 @media (min-width: 768px) {
 	.conA h1 {
 		font-size: 115px;
@@ -58,4 +81,47 @@ body {
 	.conA p {
 		font-size: 24px;
 	}
+}
+
+/* コンテンツB: 概要(アイコン+テキスト) */
+.conB .text {
+	text-align: center;
+}
+
+.conB h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.conB p {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 1.8;
+	opacity: 0.8;
+}
+
+.conB a {
+	color: #5D9AB2;
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+.conB a:hober {
+	text-decoration: underline;
+}
+
+.conB .icon {
+	display: inline-block;
+	margin-bottom: 20px;
+	font-size: 40px;
+	width: 2em;
+	line-height: 2em;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #ddd;
+	background-color: var(--icon-bk-color);
+	color: #fff;
+	color: var(--icon-color);
 }
