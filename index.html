@@ -19,8 +19,37 @@
 }
 </style>
 <script src="https:///use.fontawesome.com/926fe18a63.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script >
+  $(function(){
+    $(".headC").click(function(){
+      $(".headB").slideToggle();
+    });
+  });
+</script>
 </head>
 <body>
+
+<header>
+<div class="container">
+  <div class="container-small">
+    <a href="index.html" class="headA">LOGGER</a>
+
+    <button type="button" class="headC">
+      <span class="fa fa-bars" title="MENU"></span>
+    </button>
+  </div>
+
+  <nav class="headB">
+    <ul>
+      <li><a href="index.html">TOP</a></li>
+      <li><a href="contents.html">CONTENTS</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
 
 <section class="conA">
 <div class="container">

@@ -8,8 +8,31 @@
 	--text-bright-color: #fff;
 	--icon-color: #fff;
 	--icon-bk-color: #ddd;
+	--gray-color: #ddd;
 	--large-width: 1000px;
+	--middle-width: 800px;
 }
+
+/* 基本設定: フォントサイズ */
+@media (max-width: 599px) {
+	:root {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+	:root {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 800px) {
+	:root {
+		font-size: 18px;
+	}
+}
+
+body {font-size: 16px;}
 
 /* 基本設定: ページ全体*/
 body {
@@ -439,5 +462,164 @@ footer .container {
 }
 
 .footD a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
+/* ヘッダー */
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	background-color: rgba(255,255,255,0.9);
+}
+
+.nohero header {
+	position: static;
+	border-bottom: solid 1px #ddd;
+	border-bottom: solid 1px var(--gray-color);
+}
+
+/* ヘッダーA: サイト名 */
+.headA {
+	display: inline-block;
+	line-height: 70px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #5D9AB2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+/* ヘッダーB: ナビゲーションメニュー */
+.headB ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.headB a {
+	display: block;
+	padding: 15px;
+	color: inherit;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.headB a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
+@media (min-width: 768px) {
+	header .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.headB ul {
+		display: flex;
+	}
+}
+
+/* ヘッダーC: トグルボタン */
+
+@media (max-width: 768px) {
+	/* 小さい画面用の設定 */
+	header .container-small {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.headC {
+		margin-right: 10px;
+		padding: 0;
+		border: none;
+		outline: none;
+		background: none;
+		font-size: 28px;
+		opacity: 0.5;
+		cursor: pointer;
+	}
+
+	.headC :hover{
+		opacity: 0.3;
+	}
+
+	.headB {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	/* 大きい画面用の設定 */
+	.headC {
+		display: none;
+	}
+
+	.headB {
+		display: block !important;
+	}
+}
+
+/* コンテンツページ: 記事 */
+.post .container {
+	max-width: 800px;
+	max-width: var(--middle-width);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px 10px;
+}
+
+.post h1 {
+	padding-left: 0.5rem;
+	border-left: solid 0.75rem #BF6A7A;
+	border-left:
+		solid 0.75rem var(--accent-color);
+	font-size: 2rem;
+}
+
+.post p {
+	font-size: 1rem;
+	line-height: 2;
+}
+
+.post img {
+	max-width: 100%;
+}
+
+/* コンテンツページ: パンくずリスト */
+.bread ol {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.bread a {
+	display: block;
+	padding: 5px;
+	color: inherit;
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+
+.bread a::after {
+	margin-left: 10px;
+	content: '\f054';
+	font-family: 'FontAwesome';
+	opacity: 0.3;
+}
+
+.bread a:hover {
 	background-color: rgba(0,0,0,0.3);
 }
